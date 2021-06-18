@@ -1,4 +1,4 @@
-function severLog(req, res, next) {
+function serverLog(req, res, next) {
   const method = req.method
   const url = req.originalUrl
   const reqTime = Date.now()
@@ -10,9 +10,9 @@ function severLog(req, res, next) {
 
     const currentReqTime = new Date(reqTime).toLocaleString('zh', { timeZone: 'Asia/Taipei', hour12: false })
 
-    console.log(`${currentReqTime} | ${method} form ${url} total time: ${diffTime} ms`)
+    console.log(`${currentReqTime} | ${method} form ${url} total-time: ${diffTime} ms`)
   })
   next()
 }
 
-module.exports = severLog
+module.exports = serverLog

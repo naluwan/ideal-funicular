@@ -1,10 +1,9 @@
 const express = require('express')
-const severLog = require('./severLog')
-const serverLog = require('./severLog')
+const serverLog = require('./serverLog')
 const app = express()
 const PORT = 3000
 
-app.use(severLog)
+app.use(serverLog)
 
 app.get('/', (req, res) => {
   res.send('列出全部 Todo')
